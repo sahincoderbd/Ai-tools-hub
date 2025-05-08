@@ -37,8 +37,7 @@ else{
         
         // container inner HTML
         toolsDiv.innerHTML=`
-        <img 
-                class="rounded-lg w-full h-full md:w-[500px] md:h-[230px] " 
+        <img class="rounded-lg w-full h-full md:w-[500px] md:h-[230px] " 
                 src="${tool?.image && tool.image.length > 10 ? tool.image : 'images/rectangle23.png'}" 
                 onerror="this.src='images/rectangle23.png'" 
                 alt="${tool?.name || 'Tool Image'}"
@@ -166,16 +165,16 @@ createdModalChild.innerHTML=`
                         <div class=" rounded-lg p-2">
                      <h6 class="text-xl font-medium dark:text-white">Features</h6>
                             
-                        <li class="text-gray-600 text-sm"> ${toolData.features?.['1'].feature_name}</li>
-                        <li class="text-gray-600 text-sm"> ${toolData.features?.['2'].feature_name}</li>
-                        <li class="text-gray-600 text-sm"> ${toolData.features?.['3'].feature_name}</li>
+                        <li class="text-gray-600 dark:text-white text-sm"> ${toolData.features?.['1'].feature_name}</li>
+                        <li class="text-gray-600 dark:text-white text-sm"> ${toolData.features?.['2'].feature_name}</li>
+                        <li class="text-gray-600 dark:text-white text-sm"> ${toolData.features?.['3'].feature_name}</li>
                         </div>
                         <div class=" rounded-lg p-2">
                      <h6 class="text-xl font-medium dark:text-white">Integrations</h6>
                             
-                        <li class="text-gray-600 text-sm"> ${toolData.integrations[0]} </li>
-                        <li class="text-gray-600 text-sm"> ${toolData.integrations[1]}</li>
-                        <li class="text-gray-600 text-sm"> ${toolData.integrations[2]}</li>
+                        <li class="text-gray-600 dark:text-white text-sm"> ${toolData.integrations[0]} </li>
+                        <li class="text-gray-600 dark:text-white text-sm"> ${toolData.integrations[1]}</li>
+                        <li class="text-gray-600 dark:text-white text-sm"> ${toolData.integrations[2]}</li>
                         </div>
                         
                        
@@ -187,7 +186,7 @@ createdModalChild.innerHTML=`
                    <p class="absolute top-4 right-4 px-3 py-1 text-base text-white font-normal leading-relaxed bg-[#EB5757] text-center rounded-md">${toolData.accuracy?.score}% accuracy</p>
                     
                     <img class="rounded-lg" src="${toolData?.image_link[0] && toolData.image_link[0].length > 10 ? toolData.image_link[0] : 'images/rectangle23.png'}" 
-               
+               onerror="this.src='images/rectangle23.png'" 
                 alt="${toolData?.tool_name || 'Tool Image'}">
 
                     <h6 class="text-xl font-medium dark:text-white text-center">${toolData.input_output_examples[0]?.input}</h6>
