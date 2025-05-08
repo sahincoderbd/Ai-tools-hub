@@ -131,26 +131,26 @@ createdModalChild.innerHTML=`
             </div>
             <!-- Modal body -->
             <div class="p-3 md:p-4 space-y-4 ">
-                <div class="flex flex-col md:flex-row gap-3 justify-center items-center p-4" >
-                    <div class="flex flex-col gap-2 nowrap border-2 border-[#EB5757] rounded-2xl p-3 bg-[#EB57570D]">
+                <div class="flex flex-col md:flex-row gap-3 justify-center items-stretch p-4" >
+                    <div class=" basis-3/5 max-h-full flex flex-col gap-2 nowrap border-2 border-[#EB5757] dark:border-gray-500 rounded-2xl p-3 bg-[#EB57570D]">
                         
                      <h6 class="text-lg font-medium dark:text-white">${toolData.description}</h6>
                      <!-- pricing text  table-->
-                     <div class="flex gap-2">
-                        <div class="bg-white dark:bg-gray-900 rounded-lg p-2">
+                     <div class="flex gap-2 h-full">
+                        <div class="bg-white rounded-lg p-2">
                             <p class="text-base font-semibold leading-relaxed text-[#03A30A] text-center ">
                                 <span>${toolData.pricing[0]?.price}</span>
                                 ${toolData.pricing[0].plan}
                              </p>
                         </div>
-                        <div class="bg-white dark:bg-gray-900 rounded-lg p-2">
+                        <div class="bg-white  rounded-lg p-2">
                             <p class="text-base font-semibold leading-relaxed text-[#F28927] text-center ">
                                 <span>${toolData.pricing[1]?.price}</span>
                                 ${toolData.pricing[1].plan}
 
                              </p>
                         </div>
-                        <div class="bg-white dark:bg-gray-900 rounded-lg p-2">
+                        <div class="bg-white rounded-lg p-2">
                             <p class="text-base font-semibold leading-relaxed text-[#EB5757] text-center ">
                                  <span>${toolData.pricing[2]?.price}</span>
                                 ${toolData.pricing[2].plan}
@@ -162,15 +162,15 @@ createdModalChild.innerHTML=`
 
                     <!-- features list -->
                      <div class="flex gap-2 justify-between">
-                        <div class=" rounded-lg p-2">
-                     <h6 class="text-xl font-medium dark:text-white">Features</h6>
+                    <div class=" rounded-lg p-2 ">
+                     <h6 class="text-xl font-medium dark:text-white mb-1">Features</h6>
                             
                         <li class="text-gray-600 dark:text-white text-sm"> ${toolData.features?.['1'].feature_name}</li>
                         <li class="text-gray-600 dark:text-white text-sm"> ${toolData.features?.['2'].feature_name}</li>
                         <li class="text-gray-600 dark:text-white text-sm"> ${toolData.features?.['3'].feature_name}</li>
                         </div>
                         <div class=" rounded-lg p-2">
-                     <h6 class="text-xl font-medium dark:text-white">Integrations</h6>
+                     <h6 class="text-xl font-medium dark:text-white mb-1">Integrations</h6>
                             
                         <li class="text-gray-600 dark:text-white text-sm"> ${toolData.integrations[0]} </li>
                         <li class="text-gray-600 dark:text-white text-sm"> ${toolData.integrations[1]}</li>
@@ -182,7 +182,7 @@ createdModalChild.innerHTML=`
                     </div>
                     
                     </div>
-                   <div class="relative flex flex-col space-y-3 nowrap border-2 border-[#E7E7E7] rounded-xl p-2">
+                   <div class="basis-2/5 relative flex flex-col space-y-3 nowrap border-2 border-[#E7E7E7] dark:border-gray-500 rounded-xl p-2">
                    <p class="absolute top-4 right-4 px-3 py-1 text-base text-white font-normal leading-relaxed bg-[#EB5757] text-center rounded-md">${toolData.accuracy?.score}% accuracy</p>
                     
                     <img class="rounded-lg" src="${toolData?.image_link[0] && toolData.image_link[0].length > 10 ? toolData.image_link[0] : 'images/rectangle23.png'}" 
@@ -190,7 +190,7 @@ createdModalChild.innerHTML=`
                 alt="${toolData?.tool_name || 'Tool Image'}">
 
                     <h6 class="text-xl font-medium dark:text-white text-center">${toolData.input_output_examples[0]?.input}</h6>
-                    <p class="text-base font-normal leading-relaxed text-[#585858] text-center ">
+                    <p class="text-base font-normal leading-relaxed text-[#585858] dark:text-white text-center ">
                     ${toolData.input_output_examples[0]?.output}
                      </p>
                    </div>
@@ -202,7 +202,7 @@ createdModalChild.innerHTML=`
         </div>
 
 `
-createdModalChild.setAttribute('class','relative p-4 w-3xl max-h-full');
+createdModalChild.setAttribute('class','relative p-4 w-4xl max-h-full');
 modalContainer.appendChild(createdModalChild);
 
 
